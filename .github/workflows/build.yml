@@ -1,5 +1,4 @@
-name: Build
-
+name: Build .exe
 on:
   push:
     branches: [ main ]
@@ -21,4 +20,3 @@ jobs:
       with:
         name: stuckfixer
         path: stuckfixer.exe
-// Done
