@@ -1,4 +1,3 @@
-
 #include <windows.h>
 
 #define HOTKEY_FIX  1
