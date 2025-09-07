@@ -1,1 +1,23 @@
+name: Build stuckfixer
 
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Compile focusfixer.c
+      run: |
+        gcc stuckfixer.c -o stuckfixer.exe -mwindows -Os -s -nostdlib -lkernel32 -luser32
+
+    - name: Upload Artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: stuckfixer-exe
+        path: stuckfixer.exe
