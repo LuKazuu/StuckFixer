@@ -4,6 +4,7 @@
 #define HOTKEY_FIX  1
 #define HOTKEY_EXIT 2
 
+// Start
 void SimulateFocusSwitch() {
     HWND current = GetForegroundWindow();
     HWND dummy = CreateWindowEx(WS_EX_TOOLWINDOW, "STATIC", "", WS_OVERLAPPEDWINDOW,
